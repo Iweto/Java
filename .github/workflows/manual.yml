@@ -17,16 +17,16 @@ on:
         type: choice
         description: AWS POSTGRE TESTS:http://api-testing.postgre-eu-central-1-stats-tests.analytics.rse.dev.eu-central-1.aws.fdscloud.io:8080/WebPortal/rest/
         options: 
-        - http://api-testing.postgre-eu-central-1-stats-tests.analytics.rse.dev.eu-central-1.aws.fdscloud.io:8080/WebPortal/rest/
-        - http://api.ap-south-1-cognity-stats.analytics.rse.dev.ap-south-1.aws.fdscloud.io:8080/WebPortal/rest/
-        - http://api-testing.eu-central-1-cognity-stats-tests.analytics.rse.dev.eu-central-1.aws.fdscloud.io:8080/WebPortal/rest/
-        - https://hflp-cognity-api.hosting.factset.com/WebPortal/rest/
-        - https://hflu-cognity-api.hosting.factset.com/WebPortal/rest/
-        - https://dkbp-cognity-api.hosting.factset.com/WebPortal/rest/
-        - https://dkbu-cognity-api.hosting.factset.com/WebPortal/rest/
-        - https://dkbd-cognity-api.hosting.factset.com/WebPortal/rest/
-        - https://jdyp.hosting.factset.com/WebPortal/rest/
-        - https://hbwu-cognity-api.hosting.factset.com/WebPortal/rest/
+        - proba1
+        - test2
+        - test3
+        - test4
+        - test5
+        - test6
+        - test7
+        - test8
+        - test9
+        - test10
         required: true
       user:  
   push:

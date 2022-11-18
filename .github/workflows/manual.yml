@@ -77,6 +77,4 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-          echo $folder
-          echo "$verifyValues"
-          echo $groups
+          echo $github.event.inputs

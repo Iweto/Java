@@ -38,7 +38,13 @@ on:
         - latestQuarterEnd
         - latestMonthEnd
         - "2021-12-31"
-        - "2019-09-30"  
+        - "2019-09-30"
+      benchmarkId:
+        type: choice
+        default: Portal_SP50-USD_TR
+        required: true
+        options:
+        - "Portal_SP50-USD_TR" 
   push:
     branches: [ "master" ]
   pull_request:

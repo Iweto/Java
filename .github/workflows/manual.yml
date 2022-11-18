@@ -81,5 +81,6 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-          echo $folder
-
+          echo "${{ github.event.inputs.folder }}"
+          echo "${{ github.event.inputs.verifyValues }}"
+          echo ${{ github.event.inputs.groups }}

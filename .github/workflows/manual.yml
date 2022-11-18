@@ -2,6 +2,10 @@
 
 name: PortalRestAPIFunctionalTests
 on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]      
   workflow_dispatch:
     inputs:
       serverURL:
@@ -62,7 +66,7 @@ on:
       verifyValues:  
         type: boolean
         required: true
-        default: true  
+        default: true     
 jobs:
   build:
     runs-on: [ self-hosted, ubuntu-latest ]
@@ -77,5 +81,5 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-          echo $GITHUB_TOKEN
+          echo $folder
 

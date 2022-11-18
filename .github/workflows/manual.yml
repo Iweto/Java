@@ -10,7 +10,7 @@ on:
     inputs:
       serverURL:
         type: choice
-        description: AWS eh
+        description: serverURL
         options: 
         - proba1
         - test2

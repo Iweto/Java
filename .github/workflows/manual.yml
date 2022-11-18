@@ -85,4 +85,12 @@ jobs:
           verifyValues: ${{ github.event.inputs.verifyValues }}
       run: 
           echo $GITHUB_TOKEN
-          echo $env
+          echo $serverURL
+          echo $user
+          echo $password
+          echo $asOfDate
+          echo $benchmarkId
+          echo $groups
+          echo $folder
+          echo $fixedAsOfDate
+          echo $verifyValues

@@ -15,7 +15,7 @@ on:
         required: true
       serverURL:
         type: choice
-        description: AWS POSTGRE TESTS:http://api-testing.postgre-eu-central-1-stats-tests.analytics.rse.dev.eu-central-1.aws.fdscloud.io:8080/WebPortal/rest/
+        description: AWS eh
         options: 
         - proba1
         - test2
@@ -29,6 +29,12 @@ on:
         - test10
         required: true
       user:  
+        type: String
+        default: Iweto
+        required: true
+      password:
+        type: String
+        required: true
   push:
     branches: [ "master" ]
   pull_request:

@@ -6,7 +6,6 @@ on:
     inputs:
       serverURL:
         type: choice
-        description: serverURL
         options: 
         - proba1
         - test2
@@ -28,7 +27,6 @@ on:
         required: true
       asOfDate:
         type: choice
-        description: DEV:latestQuarterEnd CAPGROUP/HARTFORD/DEKA:2021-12-31
         required: true
         options:
         - latestQuarterEnd
@@ -53,6 +51,10 @@ on:
         - DEKA
         - HARTFORD
         - CAPGROUP     
+      verifyValues:  
+        type: boolean
+        required: true
+        default: true  
 jobs:
   build:
     runs-on: [ self-hosted, ubuntu-latest ]

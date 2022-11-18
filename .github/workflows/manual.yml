@@ -50,7 +50,11 @@ on:
         - DEV
         - DEKA
         - HARTFORD
-        - CAPGROUP     
+        - CAPGROUP 
+      fixedAsOfDate:
+        type: choice
+        required: true
+        description: DEV:2018-09-30 CAPGROUP/HARTFORD/DEKA:2021-12-31  
       verifyValues:  
         type: boolean
         required: true

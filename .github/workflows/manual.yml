@@ -18,8 +18,6 @@ on:
         - test9
         - test10
         required: true
-      environment:
-        type: env
       user:  
         type: String
         default: Iweto
@@ -76,5 +74,15 @@ jobs:
     - name: Build with Ant
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-          echo ${{ github.event.inputs }}
+          serverURL: ${{ github.event.inputs.serverURL }}
+          user: ${{ github.event.inputs.user }}
+          password: ${{ github.event.inputs.password }}
+          asOfDate: ${{ github.event.inputs.asOfDate }}
+          benchmarkId: ${{ github.event.inputs.benchmarkId }}
+          groups: ${{ github.event.inputs.groups }}
+          folder: ${{ github.event.inputs.folder }}
+          fixedAsOfDate: ${{ github.event.inputs.fixedAsOfDate }}
+          verifyValues: ${{ github.event.inputs.verifyValues }}
+      run: 
+          echo $GITHUB_TOKEN
+          echo $env

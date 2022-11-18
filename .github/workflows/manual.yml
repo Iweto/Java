@@ -45,6 +45,11 @@ on:
         required: true
         options:
         - "Portal_SP50-USD_TR" 
+      groups:
+        type: String
+        default: DEV
+        required: true
+        description: For staging branch:DEV, DEKA, CAPGROUP, HARTFORD and valueCheck. For the other branches:generic,formatCheck,valueCheck,capgrooup. If you want to select more than one group, seperate them with comma.  
   push:
     branches: [ "master" ]
   pull_request:

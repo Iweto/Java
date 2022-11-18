@@ -1,11 +1,7 @@
 # This is a basic workflow that is manually triggered
 
 name: PortalRestAPIFunctionalTests
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]      
+on: 
   workflow_dispatch:
     inputs:
       serverURL:
@@ -81,6 +77,6 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-          echo "${{ github.event.inputs.folder }}"
-          echo "${{ github.event.inputs.verifyValues }}"
-          echo ${{ github.event.inputs.groups }}
+          echo $folder
+          echo "$verifyValues"
+          echo $groups

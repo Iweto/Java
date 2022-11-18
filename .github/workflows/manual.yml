@@ -77,4 +77,4 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-          echo $github.event.inputs
+          echo  echo "${{ github.event.inputs }}

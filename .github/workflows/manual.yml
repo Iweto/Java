@@ -18,6 +18,8 @@ on:
         - test9
         - test10
         required: true
+      environment:
+        type: env
       user:  
         type: String
         default: Iweto

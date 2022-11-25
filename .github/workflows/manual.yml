@@ -72,7 +72,7 @@ jobs:
         java-version: '17'
         distribution: 'corretto'
     - name: Prints the current branch name
-      run: echo "${GITHUB_BRANCH##*/}"
+      run: echo "${GITHUB_REF#refs/heads/}"
     - name: Build with Ant
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

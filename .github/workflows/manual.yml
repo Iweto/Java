@@ -75,6 +75,11 @@ jobs:
       with:
         java-version: '17'
         distribution: 'corretto'
+    - name: Extract branch name
+      shell: bash
+      run: echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//_/g')"
+    - name: Test
+      run: echo "${BRANCH_NAME}"
     - name: Build with Ant
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -87,6 +92,7 @@ jobs:
           folder: ${{ github.event.inputs.folder }}
           fixedAsOfDate: ${{ github.event.inputs.fixedAsOfDate }}
           verifyValues: ${{ github.event.inputs.verifyValues }}
+          Branch: ${BRANCH_NAME}
       run: 
           echo $GITHUB_TOKEN
           echo $serverURL
@@ -98,3 +104,4 @@ jobs:
           echo $folder
           echo $fixedAsOfDate
           echo $verifyValues 
+          echo $Branch

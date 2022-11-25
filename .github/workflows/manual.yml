@@ -2,6 +2,10 @@
 
 name: PortalRestAPIFunctionalTests
 on: 
+  push:
+    branches: [ "feature_testIweto" ]
+  pull_request:
+    branches: [ "feature_testIweto" ]
   workflow_dispatch:
     inputs:
       serverURL:

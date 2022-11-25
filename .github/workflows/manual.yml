@@ -83,6 +83,7 @@ jobs:
           folder: ${{ github.event.inputs.folder }}
           fixedAsOfDate: ${{ github.event.inputs.fixedAsOfDate }}
           verifyValues: ${{ github.event.inputs.verifyValues }}
+          Branch: ${{ github.ref }}
       run: 
           echo $GITHUB_TOKEN
           echo $serverURL
@@ -94,3 +95,4 @@ jobs:
           echo $folder
           echo $fixedAsOfDate
           echo $verifyValues 
+          echo $Branch

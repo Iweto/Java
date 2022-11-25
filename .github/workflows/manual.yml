@@ -71,6 +71,10 @@ jobs:
       with:
         java-version: '17'
         distribution: 'corretto'
+    - name: Get the current branch name
+      shell: bash
+      run: echo "::set-output name=Branch::${GITHUB_REF#refs/heads/}"
+      id: myref    
     - name: Build with Ant
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -83,7 +87,7 @@ jobs:
           folder: ${{ github.event.inputs.folder }}
           fixedAsOfDate: ${{ github.event.inputs.fixedAsOfDate }}
           verifyValues: ${{ github.event.inputs.verifyValues }}
-          Branch: ${GITHUB_REF#refs/heads/} 
+          Branch: ${{ steps.myref.outputs.branch }}
       run: 
           echo $GITHUB_TOKEN
           echo $serverURL

@@ -93,4 +93,4 @@ jobs:
           echo $groups
           echo $folder
           echo $fixedAsOfDate
-          echo $verifyValues
+          echo $verifyValues 

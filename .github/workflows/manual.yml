@@ -73,7 +73,6 @@ jobs:
         distribution: 'corretto'
     - name: Get the current branch name
       run: echo "Branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
-      id: myref    
     - name: Build with Ant
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
